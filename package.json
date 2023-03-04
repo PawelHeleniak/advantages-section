@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://pawelheleniak.github.io/advantages-section/",
   "scripts": {
+    "watch:scss": "node sass --watch src/pages/home-page/styles/home-page.scss:src/pages/home-page/styles/home-page.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",

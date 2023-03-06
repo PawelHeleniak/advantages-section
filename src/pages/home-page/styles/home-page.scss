@@ -22,6 +22,7 @@ main {
     .block_technology,
     .block_personalization,
     .block_responsibility {
+      height: 100%;
       border-radius: 12px;
       box-shadow: 0px 0px 23.5167px rgba(0, 0, 0, 0.06);
     }
@@ -37,6 +38,7 @@ main {
 
     .block-content {
       padding: 24px 16px;
+      height: 100%;
       .block-content-info {
         h2 {
           color: var(--black);
@@ -84,6 +86,7 @@ main {
   @include mix.desktop {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 180px 152px 174px 152px;
     .block {
       display: flex;
@@ -91,18 +94,26 @@ main {
       justify-content: space-between;
       margin-right: 16px;
       margin-bottom: 0;
-      padding: 32px;
-      flex-basis: 33.3%;
-
       &:last-child {
         margin-right: 0;
       }
-      .block-content-info {
-        h2 {
-          font-size: 32px;
-          margin-top: 24px;
-          margin-bottom: 16px;
-          line-height: 120%;
+      .block_technology,
+      .block_personalization,
+      .block_responsibility {
+        max-width: 368px;
+      }
+      .block-content {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .block-content-info {
+          h2 {
+            font-size: 32px;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            line-height: 120%;
+          }
         }
       }
     }

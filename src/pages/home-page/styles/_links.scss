@@ -42,5 +42,8 @@
 @include mix.desktop {
   .block-content-btn {
     margin-top: 24px;
+    a {
+      letter-spacing: 0.3px;
+    }
   }
 }

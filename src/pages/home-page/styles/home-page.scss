@@ -1,35 +1,15 @@
-/// Homepage Styles File
-/// Here we import all the Styles files we need for our Homepage.
-
-//variables
-$black: #000;
-$gray: #141414;
-$white: #fff;
-$blue: #3d63ac;
-$light-blue: #e4e9f3;
-$green: #428a2f;
-$light-green: #e5efe2;
-$yellow: #b09e3d;
-$light-yellow: #f4f1e4;
-
-//media
-@mixin desktop {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-@mixin tablet {
-  @media (min-width: 834px) {
-    @content;
-  }
-}
+/// Main scss
+@use "./variables";
+@use "./mixins" as mix;
+@use "./icons" as *;
+@use "./links" as *;
 
 //Homepage
-h2 {
-  color: $black;
+* {
+  box-sizing: border-box;
 }
-p {
-  color: $gray;
+body {
+  margin: 0;
 }
 
 main {
@@ -39,118 +19,69 @@ main {
 
   .block {
     margin-bottom: 16px;
-    box-shadow: 0px 0px 23.5167px rgba(0, 0, 0, 0.06);
-    border-radius: 12px;
-    padding: 24px 16px;
+    .block_technology,
+    .block_personalization,
+    .block_responsibility {
+      border-radius: 12px;
+      box-shadow: 0px 0px 23.5167px rgba(0, 0, 0, 0.06);
+    }
+    &_technology {
+      background: var(--light-green);
+    }
+    &_personalization {
+      background: var(--light-blue);
+    }
+    &_responsibility {
+      background: var(--light-yellow);
+    }
 
-    &.block-first {
-      background: $light-green;
-      .block-icon {
-        background-color: $green;
-      }
-    }
-    &.block-second {
-      background: $light-blue;
-      .block-icon {
-        background-color: $blue;
-      }
-    }
-    &.block-third {
-      background: $light-yellow;
-      .block-icon {
-        background-color: $yellow;
+    .block-content {
+      padding: 24px 16px;
+      .block-content-info {
+        h2 {
+          color: var(--black);
+          font-family: "Raleway", sans-serif;
+          font-size: 26px;
+          margin-top: 16px;
+          margin-bottom: 8px;
+          letter-spacing: 0;
+          line-height: 1.2em;
+        }
+        p {
+          color: var(--gray);
+          font-family: "Raleway", sans-serif;
+          font-size: 14px;
+          letter-spacing: 0px;
+          line-height: 140%;
+          margin: 0;
+          line-height: 1.43em;
+        }
       }
     }
 
     &:last-child {
       margin-bottom: 0;
     }
-    .block-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 100%;
-      img {
-        width: 24px;
-      }
-    }
-    .block-information {
-      h2 {
-        font-family: "Raleway", sans-serif;
-        margin-top: 16px;
-        margin-bottom: 8px;
-        font-size: 26px;
-      }
-      p {
-        font-family: "Raleway", sans-serif;
-        font-size: 14px;
-        letter-spacing: 0.3px;
-        line-height: 140%;
-        margin: 0;
-      }
-    }
-    .block-btn {
-      margin-top: 16px;
-      display: flex;
-      align-items: center;
-      a {
-        color: $black;
-        background: $white;
-        padding: 14px 19px 15px 24px;
-        width: max-content;
-        text-decoration: none;
-        font-size: 12px;
-        margin-right: 6px;
-        font-family: "Raleway", sans-serif;
-        border-radius: 200px;
-        transition: all 0.2s ease-out;
-        &:hover {
-          color: $blue;
-          svg {
-            color: $blue;
-          }
-        }
-        &:focus,
-        &:active {
-          background: $light-blue;
-          color: $blue;
-          svg {
-            color: $blue;
-          }
-        }
-        svg {
-          width: 19px;
-          vertical-align: middle;
-          transition: all 0.2s ease-out;
-        }
-      }
-    }
   }
 
-  @include tablet {
+  @include mix.tablet {
     padding: 120px 41px 106px 41px;
     .block {
-      padding: 24px;
-      .block-information {
-        h2 {
-          font-size: 32px;
-        }
-        p {
-          font-size: 16px;
-        }
-      }
-      .block-icon {
-        width: 72px;
-        height: 72px;
-        img {
-          width: 40px;
+      .block-content {
+        padding: 24px;
+        .block-content-info {
+          h2 {
+            font-size: 32px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 1.375em;
+          }
         }
       }
     }
   }
-  @include desktop {
+  @include mix.desktop {
     display: flex;
     flex-direction: row;
     padding: 180px 152px 174px 152px;
@@ -166,16 +97,13 @@ main {
       &:last-child {
         margin-right: 0;
       }
-      .block-information {
+      .block-content-info {
         h2 {
           font-size: 32px;
           margin-top: 24px;
           margin-bottom: 16px;
           line-height: 120%;
         }
-      }
-      .block-btn {
-        margin-top: 24px;
       }
     }
   }

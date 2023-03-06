@@ -1,0 +1,39 @@
+@use "./mixins" as mix;
+
+.block-content-icon {
+  .block-content-icon_technology,
+  .block-content-icon_personalization,
+  .block-content-icon_responsibility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+  }
+  &_technology {
+    background-color: var(--green);
+  }
+  &_personalization {
+    background-color: var(--blue);
+  }
+  &_responsibility {
+    background-color: var(--yellow);
+  }
+  img {
+    width: 24px;
+  }
+}
+@include mix.tablet {
+  .block-content-icon {
+    .block-content-icon_technology,
+    .block-content-icon_personalization,
+    .block-content-icon_responsibility {
+      width: 72px;
+      height: 72px;
+    }
+    img {
+      width: 40px;
+    }
+  }
+}

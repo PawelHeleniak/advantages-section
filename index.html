@@ -5,7 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INVO Academy JS Starter with Vite</title>
-    <link rel="stylesheet" href="src/pages/home-page/styles/home-page.css" />
+    <!-- Css -->
+    <link rel="stylesheet" href="src/pages/home-page/styles/home-page.scss" />
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
@@ -13,175 +18,155 @@
   <body>
     <div id="home-page">
       <main>
-        <section class="block block-first">
-          <div class="block-content">
-            <div class="block-icon">
-              <img src="./public/images/3d-box.png" alt="3d box icon" />
-            </div>
-            <div class="block-information">
-              <h2>Increased use of technology</h2>
-              <p>
-                The insurance industry is expected to adopt more
-                technology-driven solutions to improve the customer experience
-                and streamline operations. This will enable them to offer more
-                competitive pricing and improve the customer experience
-              </p>
-            </div>
-          </div>
-          <div class="block-btn">
-            <a href=""
-              >Learn More
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_3_32)">
-                  <path
-                    d="M14.9844 9.50757L3.00015 9.50757"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M10.1903 5L15 9.5L10.1903 14"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_3_32">
-                    <rect
-                      width="19"
-                      height="19"
-                      fill="white"
-                      transform="translate(19) rotate(90)"
+        <section class="block">
+          <div class="block_technology">
+            <div class="block-content">
+              <div class="block-content-icon">
+                <div class="block-content-icon_technology">
+                  <img src="./public/images/3d-box.png" alt="3d box icon" />
+                </div>
+              </div>
+              <div class="block-content-info">
+                <h2>Increased use of technology</h2>
+                <p>
+                  The insurance industry is expected to adopt more
+                  technology-driven solutions to improve the customer experience
+                  and streamline operations. This will enable them to offer more
+                  competitive pricing and improve the customer experience
+                </p>
+              </div>
+            <div class="block-content-btn">
+              <a href=""
+                >Learn More
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3_32)">
+                    <path
+                      d="M14.9844 9.50757L3.00015 9.50757"
+                      stroke="currentcolor"
+                      stroke-width="1.21109"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
+                    <path
+                      d="M10.1903 5L15 9.5L10.1903 14"
+                      stroke="currentcolor"
+                      stroke-width="1.21109"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
-        <section class="block block-second">
-          <div class="block-content">
-            <div class="block-icon">
-              <img
-                src="./public/images/single-user.png"
-                alt="single user icon"
-              />
-            </div>
-            <div class="block-information">
-              <h2>Customization and personalization</h2>
-              <p>
-                With the rise of big data and advanced analytics, insurance
-                companies will be better equipped to offer customized and
-                personalized insurance products based on an individual's unique
-                circumstances and needs
-              </p>
-            </div>
-          </div>
-          <div class="block-btn">
-            <a href=""
-              >Learn More
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_3_32)">
-                  <path
-                    d="M14.9844 9.50757L3.00015 9.50757"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+        <section class="block">
+          <div class="block_personalization">
+            <div class="block-content">
+              <div class="block-content-icon">
+                <div class="block-content-icon_personalization">
+                  <img
+                    src="./public/images/single-user.png"
+                    alt="single user icon"
                   />
-                  <path
-                    d="M10.1903 5L15 9.5L10.1903 14"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_3_32">
-                    <rect
-                      width="19"
-                      height="19"
-                      fill="white"
-                      transform="translate(19) rotate(90)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
+                </div>
+                <div class="block-content-info">
+                  <h2>Customization and personalization</h2>
+                  <p>
+                    With the rise of big data and advanced analytics, insurance
+                    companies will be better equipped to offer customized and
+                    personalized insurance products based on an individual's
+                    unique circumstances and needs
+                  </p>
+                </div>
+              </div>
+              <div class="block-content-btn">
+                <a href=""
+                  >Learn More
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_3_32)">
+                      <path
+                        d="M14.9844 9.50757L3.00015 9.50757"
+                        stroke="currentcolor"
+                        stroke-width="1.21109"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.1903 5L15 9.5L10.1903 14"
+                        stroke="currentcolor"
+                        stroke-width="1.21109"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="block block-third">
-          <div class="block-content">
-            <div class="block-icon">
-              <img
-                src="./public/images/business-products.png"
-                alt="business products icon"
-              />
-            </div>
-            <div class="block-information">
-              <h2>Sustainability and social responsibility</h2>
-              <p>
-                As consumers become more environmentally and socially conscious,
-                insurance companies are likely to place a greater emphasis on
-                sustainability and social responsibility in their products and
-                operations
-              </p>
-            </div>
-          </div>
-          <div class="block-btn">
-            <a href=""
-              >Learn More
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_3_32)">
-                  <path
-                    d="M14.9844 9.50757L3.00015 9.50757"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+        <section class="block">
+          <div class="block_responsibility">
+            <div class="block-content">
+              <div class="block-content-icon">
+                <div class="block-content-icon_responsibility">
+                  <img
+                    src="./public/images/business-products.png"
+                    alt="business products icon"
                   />
-                  <path
-                    d="M10.1903 5L15 9.5L10.1903 14"
-                    stroke="currentcolor"
-                    stroke-width="1.21109"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_3_32">
-                    <rect
-                      width="19"
-                      height="19"
-                      fill="white"
-                      transform="translate(19) rotate(90)"
+                </div>
+                <div class="block-content-info">
+                  <h2>Sustainability and social responsibility</h2>
+                  <p>
+                    As consumers become more environmentally and socially
+                    conscious, insurance companies are likely to place a greater
+                    emphasis on sustainability and social responsibility in
+                    their products and operations
+                  </p>
+                </div>
+              </div>
+            <div class="block-content-btn">
+              <a href=""
+                >Learn More
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_3_32)">
+                    <path
+                      d="M14.9844 9.50757L3.00015 9.50757"
+                      stroke="currentcolor"
+                      stroke-width="1.21109"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
+                    <path
+                      d="M10.1903 5L15 9.5L10.1903 14"
+                      stroke="currentcolor"
+                      stroke-width="1.21109"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
       </main>

@@ -1,0 +1,46 @@
+@use "./mixins" as mix;
+
+.block-content-btn {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+    padding: 14px 19px 15px 24px;
+    width: max-content;
+    font-family: "Satoshi", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-decoration: none;
+    border-radius: 200px;
+    color: var(--black);
+    background: var(--white);
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: var(--blue);
+      svg {
+        color: var(--blue);
+      }
+    }
+    &:focus,
+    &:active {
+      background: var(--white);
+      color: var(--blue);
+      svg {
+        color: var(--blue);
+      }
+    }
+    svg {
+      margin-left: 6px;
+      width: 19px;
+      vertical-align: middle;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
+@include mix.desktop {
+  .block-content-btn {
+    margin-top: 24px;
+  }
+}
